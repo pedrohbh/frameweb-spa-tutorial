@@ -200,58 +200,60 @@ sumario=tradicional
 \section{Instalação}
 	
 \subsection{Instalação do FrameWeb SPA}
-Para instalar o FrameWeb SPA acesse o sítio eletrônico \url{https://github.com/pedrohbh/FrameWebSPA} e clone o repositório para sua máquina (ou baixe o zip disponível em ``Code'' -> ``Download Zip'').
+Para instalar o FrameWeb SPA acesse o sítio eletrônico \url{https://github.com/pedrohbh/FrameWebSPA} e clone o repositório para sua máquina (ou baixe o zip disponível em ``Code'' -> ``Download Zip'') [\autoref{fig:tutorial-1}].
 
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{"figuras/Tutorial 1"}
+	\caption{Repositório GitHub}
+	\label{fig:tutorial-1}
+\end{figure}
+
+Após baixar o repositório, siga os seguintes passos:
+\begin{enumerate}
+	\item Abra o Eclipse;
+	\item Clique no menu Help -> Install New Software...;
+	\item Clique em ``Add..'' (\autoref{fig:siriustuto516});
+	\item Preencha os campos:
+	\begin{description}
+		\item[Name:] Pode ser o nome que você quiser. \textit{Sugestão: FrameWeb SPA};
+		\item[Location:] Clique no botão ``Archive…'' e depois selecione o arquivo ``FrameWeb.zip'' na pasta onde foi clonado o repositório do GitHub anteriormente;
+	\end{description}
+\end{enumerate}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figuras/Sirius_tuto5_16}
+	\caption{Menu de instalação do Eclipse}
+	\label{fig:siriustuto516}
+\end{figure}
+
+
+Open Eclipse;
+Click on the menu Help > Install New Software...
+In the Work with: field, type http://dev.nemo.inf.ufes.br/framewebplugin/ and press Enter;
+Unmark the checkbox Group items by category;
+Mark the checkbox for all FrameWeb Tools that show in the list (see figure below);
+Click Next twice, select the I accept the terms of the license agreement option and then click Finish;
+After the installation, restart Eclipse.
+
+
+
+\section{Desenvolvimento}
 	
-	Este documento e seu código-fonte são exemplos de referência de uso da classe
-	\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento exemplifica a
-	elaboração de publicação periódica científica impressa produzida conforme a ABNT
-	NBR 6022:2018 \emph{Informação e documentação - Artigo em publicação periódica
-		científica - Apresentação}.
+\subsection{Margens}
 	
-	A expressão ``Modelo canônico'' é utilizada para indicar que \abnTeX\ não é
-	modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-	somente os requisitos das normas da ABNT. Uma lista completa das normas
-	observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
+A norma ABNT NBR 6022:2018 não estabelece uma margem específica a ser utilizada
+no artigo científico. Dessa maneira, caso deseje alterar as margens, utilize os
+comandos abaixo:
 	
-	Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
-	\url{http://www.abntex.net.br/}. Também fique livre para conhecer,
-	estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
-	modificados tenham seus nomes alterados e que os créditos sejam dados aos
-	autores originais, nos termos da ``The \LaTeX\ Project Public
-	License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
+\begin{verbatim}
+	\setlrmarginsandblock{3cm}{3cm}{*}
+	\setulmarginsandblock{3cm}{3cm}{*}
+	\checkandfixthelayout
+\end{verbatim}
 	
-	Encorajamos que sejam realizadas customizações específicas deste documento.
-	Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
-	\abnTeX, distribua-se arquivos com as respectivas customizações. Isso permite
-	que futuras versões do \abnTeX~não se tornem automaticamente incompatíveis com
-	as customizações promovidas. Consulte \citeonline{abntex2-wiki-como-customizar}
-	para mais informações.
-	
-	Este exemplo deve ser utilizado como complemento do manual da classe
-	\textsf{abntex2} \cite{abntex2classe}, dos manuais do pacote
-	\textsf{abntex2cite} \cite{abntex2cite,abntex2cite-alf} e do manual da classe
-	\textsf{memoir} \cite{memoir}. Consulte o \citeonline{abntex2modelo} para obter
-	exemplos e informações adicionais de uso de \abnTeX\ e de \LaTeX.
-	
-	% ----------------------------------------------------------
-	% Seção de explicações
-	% ----------------------------------------------------------
-	\section{Desenvolvimento}
-	
-	\subsection{Margens}
-	
-	A norma ABNT NBR 6022:2018 não estabelece uma margem específica a ser utilizada
-	no artigo científico. Dessa maneira, caso deseje alterar as margens, utilize os
-	comandos abaixo:
-	
-	\begin{verbatim}
-		\setlrmarginsandblock{3cm}{3cm}{*}
-		\setulmarginsandblock{3cm}{3cm}{*}
-		\checkandfixthelayout
-	\end{verbatim}
-	
-	\subsection{Duas colunas}
+\subsection{Duas colunas}
 	
 	É comum que artigos científicos sejam escritos em duas colunas. Para isso,
 	adicione a opção \texttt{twocolumn} à classe do documento, como no exemplo:

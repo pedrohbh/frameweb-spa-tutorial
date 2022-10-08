@@ -299,7 +299,9 @@ Como ``Components'' para os frameworks SPA obrigatoriamente tem uma parte gráfi
 	\label{fig:partial4}
 \end{figure}
 
-Os ``Partials'', assim como os ``Pages'', podem ter associado-lhes um formulário (``Form'', que no caso do FrameWeb é chamado de ``UiComponent'') e funcionam da mesma forma que em ``Pages'' (\autoref{fig:partial2}).
+Os ``Partials'', assim como os ``Pages'', podem ter associado-lhes um formulário (``Form'', que no caso do FrameWeb é chamado de ``UIComponent'') e funcionam da mesma forma que em ``Pages'' (\autoref{fig:partial2}).
+
+No caso de frameworks SPA, é comum que um método do controlador frontal retorne a si mesmo (a sua própria ``página''), por isso, ao contrário dos frameworks MVC tradicionais, não é obrigatório especificar um retorno do controlador frontal por meio do ``ResultDepedency'', apenas caso haja um redirecionamento para um outro ``Partial'' que não seja ele próprio.
 
 \begin{figure}
 	\centering

@@ -279,7 +279,7 @@ O desenvolvimento do projeto seguem as mesmas instruções da Wiki \url{https://
 	
 \subsection{Partial}
 
-O elemento novo principal é o Partial (\autoref{fig:partial}). Ele representa a parte gráfica de um \textit{component} SPA. Possui as mesmas características do elemento <<page>> para os Frameworks MVC tradicionais, porém sua interpretação (inclusive para o gerador de código) difere de <<Page>> e para o caso dos frameworks SPA, o Partial deve ser utilizado ao invés de Page.
+O elemento novo principal é o Partial (\autoref{fig:partial}) que se encontra no menu ``View'' do Modelo de Navegação (\autoref{fig:menu1}). Ele representa a parte gráfica de um \textit{component} SPA. Possui as mesmas características do elemento <<page>> para os Frameworks MVC tradicionais, porém sua interpretação (inclusive para o gerador de código) difere de <<Page>> e para o caso dos frameworks SPA, o Partial deve ser utilizado ao invés de Page.
 
 \begin{figure}
 	\centering
@@ -288,6 +288,12 @@ O elemento novo principal é o Partial (\autoref{fig:partial}). Ele representa a
 	\label{fig:partial}
 \end{figure}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\linewidth]{figuras/menu1}
+	\caption{Menu com o elemento Partial}
+	\label{fig:menu1}
+\end{figure}
 
 Como ``Components'' para os frameworks SPA obrigatoriamente tem uma parte gráfica e uma parte lógica (o controlador frontal), \textbf{todo partial tem que estar ligado a controlador frontal por meio da relação ``Front Controller Depedency''} como na \autoref{fig:partial4}, mesmo que não haja nenhum método específico que o controle. Observe também que os nomes dos pacotes (tanto do ``View Package'' onde está o partial como o ``Controller Package'' onde está o ``FrontControllerClass'') são iguais. Isso porque o ``Component'' está em um arquivo só, contendo o ``Partial'' e a parte de controlador frontal representado pelo ``FrontControllerClass''. Por isso é recomendado que se use o mesmo nome para cada ``Component'' (tanto de pacotes como para o nome do ``Partial'' e do ``FrontControllerClass'').
 

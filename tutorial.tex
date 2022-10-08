@@ -322,7 +322,9 @@ Falando em ``ResultDependecy'', ele que é o responsável por indicar o redireci
 
 \subsection{Navigation Aggregation Association}
 
-Uma característica importante observada para os ``Components'' é a questão da modularidade, ou seja, que um ``component'' pode ser usado dentro de outro ``component'' (como pecinhas de Lego menores serem montadas separadamente e depois unidas com outras peças para montarem estruturas maiores). Para isso foi adicionado o elemento ``Navigation Aggregation Association'' disponível no menu ``View'' do Modelo de Navegação (\autoref{fig:menu2}).
+Uma característica importante observada para os ``Components'' é a questão da modularidade, ou seja, que um ``component'' pode ser usado dentro de outro ``component'' (como pecinhas de Lego menores serem montadas separadamente e depois unidas com outras peças para montarem estruturas maiores). Para isso foi adicionado o elemento ``Navigation Aggregation Association'' disponível no menu ``View'' do Modelo de Navegação (\autoref{fig:menu2}). Ele representa uma associação de agregação entre os ``Partials'', ou seja, que um ``Partial'' contém outro ``Partial'' dentro dele. Veja como exemplo a \autoref{fig:partial3} em que o ``Partial'' painel contém os ``Partials'' nova\_nota e lista\_nota.
+
+A relação de agregação 
 
 \begin{figure}
 	\centering
@@ -330,6 +332,14 @@ Uma característica importante observada para os ``Components'' é a questão da
 	\caption{Navigation Aggregation Association}
 	\label{fig:menu2}
 \end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figuras/Partial3}
+	\caption{Exemplo de trecho de aplicação com agregação entre os ``Partials''}
+	\label{fig:partial3}
+\end{figure}
+
 
 
 %Then we move on to the Navigation Model, creating a View Package /core/registration/ and a Controller Package br.ufes.informatica.oldenburg.core.controller. Here are some tips to create a Navigation Model:

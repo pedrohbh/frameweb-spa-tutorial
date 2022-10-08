@@ -221,7 +221,7 @@ Após baixar o repositório, siga os seguintes passos:
 	\end{description}
 	\item Clique no botão ``Add'' (\autoref{fig:tutorial-2});
 	\item Em ``Work with:'' selecione o repositório adicionado no passo anterior (no nosso caso, \textit{FrameWeb SPA}), marque as opções ``FrameWeb Code Generator'' e ``FrameWeb Graphical Editor'' e clique em ``Next >'' (\autoref{fig:tutorial-3});
-	\item Siga os demais passos de instalação aceitando os termos de licença. Caso apareça uma mensagem dizendo que os certificados de segurança não são reconhecidos, apenas marque todos e clique em Ok;
+	\item Siga os demais passos de instalação aceitando os termos de licença (\autoref{fig:licenca}). Caso apareça uma mensagem dizendo que os certificados de segurança não são reconhecidos, apenas marque todos e clique em Ok (\autoref{fig:certificado});
 	\item Após a instalação, reinicie o Eclipse.
 \end{enumerate}
 
@@ -246,7 +246,22 @@ Após baixar o repositório, siga os seguintes passos:
 	\label{fig:tutorial-3}
 \end{figure}
 
-Após a instalação, a montagem do seu projeto seguem os mesmos passos disponíveis na Wiki do FrameWeb \url{https://github.com/nemo-ufes/FrameWeb/wiki/ToolsTutorial02}. A \textbf{exceção} é a inclusão do projeto de arquitetura do seu framework, que ao invés de você baixar o JButler da página Github, você usará um dos três frameworks, a saber, Angular, React ou VueJS que estão disponíveis na pasta ``Frameworks'' no repositório clonado anteriormente \url{https://github.com/pedrohbh/FrameWebSPA}. É recomenda a importação das definições do Java conforme dito na Wiki.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figuras/licenca}
+	\caption{Licença}
+	\label{fig:licenca}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figuras/certificado}
+	\caption{Certificado}
+	\label{fig:certificado}
+\end{figure}
+
+
+Após a instalação, a montagem do seu projeto segue os mesmos passos disponíveis na Wiki do FrameWeb \url{https://github.com/nemo-ufes/FrameWeb/wiki/ToolsTutorial02}. A \textbf{exceção} é a inclusão do projeto de arquitetura do seu framework, que ao invés de você baixar o JButler da página Github, você usará um dos três frameworks, a saber, Angular, React ou VueJS que estão disponíveis na pasta ``Frameworks'' no repositório clonado anteriormente \url{https://github.com/pedrohbh/FrameWebSPA}. Importe também a definição da linguagem Java dentro da pasta ``Language''.
 
 
 %Open Eclipse;
@@ -260,37 +275,14 @@ Após a instalação, a montagem do seu projeto seguem os mesmos passos disponí
 
 
 \section{Desenvolvimento}
-O desenvolvimento do projeto seguem as mesmas instruções da Wiki \url{https://github.com/nemo-ufes/FrameWeb/wiki}. A exceção é o Modelo de Navegação que também segue as mesmas instruções, porém com algumas mudanças que serão descritas a seguir.
+O desenvolvimento do projeto seguem as mesmas instruções da Wiki \url{https://github.com/nemo-ufes/FrameWeb/wiki} para todos os modelos. A exceção é o Modelo de Navegação que também segue as mesmas instruções, porém com algumas mudanças que serão descritas a seguir.
 	
 \subsection{Partial}
 
-O elemento novo principal é o Partial. Ele representa a parte gráfica de um \textit{component} SPA. Possui as mesmas características do elemento <<page>> para os Frameworks MVC tradicionais, porém sua interpretação (inclusive para o gerador de código) difere de <<Page>> e para o caso dos frameworks SPA, o Partial deve ser utilizado ao invés de Page.	
+O elemento novo principal é o Partial. Ele representa a parte gráfica de um \textit{component} SPA. Possui as mesmas características do elemento <<page>> para os Frameworks MVC tradicionais, porém sua interpretação (inclusive para o gerador de código) difere de <<Page>> e para o caso dos frameworks SPA, o Partial deve ser utilizado ao invés de Page.
 
-	
-	\section{Mais exemplos no Modelo Canônico de Trabalhos Acadêmicos}
-	
-	Este modelo de artigo é limitado em número de exemplos de comandos, pois são
-	apresentados exclusivamente comandos diretamente relacionados com a produção de
-	artigos.
-	
-	Para exemplos adicionais de \abnTeX\ e \LaTeX, como inclusão de figuras,
-	fórmulas matemáticas, citações, e outros, consulte o documento
-	\citeonline{abntex2modelo}.
-	
-	\section{Consulte o manual da classe \textsf{abntex2}}
-	
-	Consulte o manual da classe \textsf{abntex2} \cite{abntex2classe} para uma
-	referência completa das macros e ambientes disponíveis.
-	
-	% ---
-	% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
-	% ---
-	\bookmarksetup{startatroot}% 
-	% ---
-	
-	% ---
-	% Conclusão
-	% ---
+\subsection{Navigation Aggregation Association}	
+
 	\section{Considerações finais}
 	
 	\lipsum[1]

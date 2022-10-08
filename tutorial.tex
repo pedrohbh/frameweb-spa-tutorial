@@ -221,6 +221,7 @@ Após baixar o repositório, siga os seguintes passos:
 	\end{description}
 	\item Clique no botão ``Add'' (\autoref{fig:tutorial-2});
 	\item Em ``Work with:'' selecione o repositório adicionado no passo anterior (no nosso caso, \textit{FrameWeb SPA}), marque as opções ``FrameWeb Code Generator'' e ``FrameWeb Graphical Editor'' e clique em ``Next >'' (\autoref{fig:tutorial-3});
+	\item Caso não apareçam as opções como na \autoref{fig:tutorial-3}, desmarque a opção ``Group items by category'';
 	\item Siga os demais passos de instalação aceitando os termos de licença (\autoref{fig:licenca}). Caso apareça uma mensagem dizendo que os certificados de segurança não são reconhecidos, apenas marque todos e clique em Ok (\autoref{fig:certificado});
 	\item Após a instalação, reinicie o Eclipse.
 \end{enumerate}
@@ -281,7 +282,30 @@ O desenvolvimento do projeto seguem as mesmas instruções da Wiki \url{https://
 
 O elemento novo principal é o Partial. Ele representa a parte gráfica de um \textit{component} SPA. Possui as mesmas características do elemento <<page>> para os Frameworks MVC tradicionais, porém sua interpretação (inclusive para o gerador de código) difere de <<Page>> e para o caso dos frameworks SPA, o Partial deve ser utilizado ao invés de Page.
 
+Como ``Components'' para os frameworks SPA obrigatoriamente tem uma parte gráfica e uma parte lógica (o controlador frontal) e por isso \textbf{todo partial tem que estar ligado a controlador frontal por meio da relação ``Front Controller Depedency''} como na figura X.
+
 \subsection{Navigation Aggregation Association}	
+
+Then we move on to the Navigation Model, creating a View Package /core/registration/ and a Controller Package br.ufes.informatica.oldenburg.core.controller. Here are some tips to create a Navigation Model:
+
+Create pages using the Page component at the palette and give them a name without the .xhtml extension, as this will be added later by the code generator;
+
+Create forms using the UI Component component at the palette. Form fields are created with UIComponentField and their type should be one of the tags from your visual component library (in our case, PrimeFaces);
+
+When selecting the type of the tag from the dropdown list, if you type the name of the Tag the list will be filtered, but you have to start from the beginning (e.g., type Tag input to see the different PrimeFaces tags that start with input);
+
+Form fields (UIComponentField) can also be added to pages directly;
+To link a page to a form, use the Navigation Association component from the palette (I know, these names are not intuitive at all, we'll work on that...);
+
+Moving to the controller side, a Front Controller Class can get attributes via IOParameter component and methods via Front Controller Method component from the palette;
+
+To connect a page or form to a controller, use Front Controller Dependency and select one of the methods from the controller in the the Method property;
+
+To connect a controller to a page, use the Result Dependency and select one of the methods from the controller in the the Result Method property. Further, click on the Result Constraints section and set the result and AJAX constraints if applicable.
+
+Naming convention note: JButler templates expect all controller classes to have the Controller suffix (e.g., RegistrationController). Code generation will work better if you follow this naming convention.
+
+The figure below shows the result for the Navigation Model.
 
 	\section{Considerações finais}
 	

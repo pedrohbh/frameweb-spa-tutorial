@@ -280,9 +280,34 @@ O desenvolvimento do projeto seguem as mesmas instruções da Wiki \url{https://
 	
 \subsection{Partial}
 
-O elemento novo principal é o Partial. Ele representa a parte gráfica de um \textit{component} SPA. Possui as mesmas características do elemento <<page>> para os Frameworks MVC tradicionais, porém sua interpretação (inclusive para o gerador de código) difere de <<Page>> e para o caso dos frameworks SPA, o Partial deve ser utilizado ao invés de Page.
+O elemento novo principal é o Partial (\autoref{fig:partial}). Ele representa a parte gráfica de um \textit{component} SPA. Possui as mesmas características do elemento <<page>> para os Frameworks MVC tradicionais, porém sua interpretação (inclusive para o gerador de código) difere de <<Page>> e para o caso dos frameworks SPA, o Partial deve ser utilizado ao invés de Page.
 
-Como ``Components'' para os frameworks SPA obrigatoriamente tem uma parte gráfica e uma parte lógica (o controlador frontal) e por isso \textbf{todo partial tem que estar ligado a controlador frontal por meio da relação ``Front Controller Depedency''} como na figura X.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\linewidth]{figuras/Partial}
+	\caption{O elemento Partial}
+	\label{fig:partial}
+\end{figure}
+
+
+Como ``Components'' para os frameworks SPA obrigatoriamente tem uma parte gráfica e uma parte lógica (o controlador frontal), e por isso \textbf{todo partial tem que estar ligado a controlador frontal por meio da relação ``Front Controller Depedency''} como na \autoref{fig:partial4}. Observe também que os nomes dos pacotes (tanto do ``View Package'' onde está o partial como o ``Controller Package'' onde está o ``FrontControllerClass'') são iguais. Isso porque o ``Component'' está em um arquivo só, contendo o ``Partial'' e a parte de controlador frontal representado pelo ``FrontControllerClass''. Por isso é recomendado que se use o mesmo nome para cada ``Component'' (tanto de pacotes como para o nome do ``Partial'' e do ``FrontControllerClass'').
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figuras/Partial4}
+	\caption{Partial ligado a seu FrontControllerClass}
+	\label{fig:partial4}
+\end{figure}
+
+Os ``Partials'', assim como os ``Pages'', podem ter associado-lhes um formulário (``Form'', que no caso do FrameWeb é chamado de ``UiComponent'') e funcionam da mesma forma que em ``Pages'' (\autoref{fig:partial2}).
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figuras/Partial2}
+	\caption{Partial ligado a um formulário}
+	\label{fig:partial2}
+\end{figure}
+
 
 \subsection{Navigation Aggregation Association}	
 
